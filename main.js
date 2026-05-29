@@ -7,11 +7,12 @@ import {
     sticksImgFrameDiv,
 } from "./dom/refs.js";
 import {
+    carouselMovement,
     hideCastBtn,
     resetResults,
     setActiveSessionBtns,
     scrollToResults,
-    scrollToInput
+    scrollToInput,
 } from "./dom/helpers.js";
 import {
     displayMoonBlocksResults, displayFortuneSticksResults,
@@ -88,3 +89,4 @@ shakeBtn.addEventListener('mouseleave', () => {
 })
 
 initIncenseCursor(moonViewDiv);
+carouselMovement();

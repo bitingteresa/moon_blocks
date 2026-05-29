@@ -8,10 +8,22 @@ import {
     questionInput,
     resetBtn,
     startSessionBtn,
+    stepsCarouselTrack,
     sticksIntroSubviewDiv,
     sticksPickedSubviewDiv,
     sticksViewDiv,
 } from "./refs.js";
+
+
+export const carouselMovement = () => {
+    const images = stepsCarouselTrack.querySelectorAll('img');
+    let current = 0;
+
+    setInterval(() => {
+        current = (current + 1) % images.length;
+        stepsCarouselTrack.style.transform = `translateX(-${current * 100}%)`;
+    }, 3500);
+}
 
 export const createImageElement = (src, className, altText) => {
     const divWrapper = document.createElement('div');
