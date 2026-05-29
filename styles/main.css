@@ -21,11 +21,18 @@
 }
 
 html {
-    background: rgb(93, 218, 177);
-    background: radial-gradient(circle, rgb(255, 255, 255) 23%, rgb(215, 141, 196) 74%, var(--dynamic-sky-color) 64%);
-    background-size: cover;
-    background-attachment: fixed;
     color: var(--plum);
+    animation: skyColorShiftTimer 15s ease-in-out infinite;
+    min-height: 100%;
+    position: relative;
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle, rgb(255, 255, 255) 23%, rgb(215, 141, 196) 74%, var(--dynamic-sky-color) 64%);
     animation: skyColorShiftTimer 15s ease-in-out infinite;
 }
 
