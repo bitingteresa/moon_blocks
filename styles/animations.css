@@ -1,0 +1,83 @@
+@keyframes skyColorShiftTimer {
+    0% {
+        --dynamic-sky-color: rgb(86, 144, 206);
+    }
+
+    25% {
+        --dynamic-sky-color: rgb(154, 32, 206);
+    }
+
+    50% {
+        --dynamic-sky-color: rgb(208, 107, 12);
+    }
+
+    75% {
+        --dynamic-sky-color: rgb(93, 218, 177);
+    }
+
+    100% {
+        --dynamic-sky-color: rgb(86, 144, 206);
+    }
+}
+
+@keyframes god-float {
+    0% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(-2deg);
+    }
+}
+
+@keyframes god-breathe {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tumble-in {
+    0% {
+        transform: translateY(-30px) rotate(-20deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(3deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}

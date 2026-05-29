@@ -1,0 +1,53 @@
+#moon-view.view {
+    transition: opacity 2s ease, visibility 2s ease;
+}
+
+#moon-img-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+
+.l-block-img-frame,
+.r-block-img-frame {
+    max-width: 200px;
+    opacity: 0;
+    animation: tumble-in 0.7s ease-out forwards;
+}
+
+.r-block-img-frame {
+    animation-delay: 0.25s;
+}
+
+.l-block-img,
+.r-block-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#moon-cast-grid p {
+    min-width: 175px;
+    opacity: 0.5;
+}
+
+#moon-cast-grid p:last-of-type {
+    opacity: 1;
+    color: var(--vermillion);
+    font-weight: bold;
+}
+
+.moon-cast-text-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#moon-outcome-bounds {
+    width: 70%;
+}
+
+.moon-outcome-text {
+    font-family: "Coiny", system-ui;
+    font-size: 2rem;
+}

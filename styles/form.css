@@ -1,0 +1,39 @@
+input {
+    font-size: 2rem;
+    font-family: "Coiny", system-ui;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 0.25rem solid var(--plum);
+    background-color: transparent;
+    color: var(--plum);
+    width: 100%;
+}
+
+input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+::placeholder {
+    color: var(--plum);
+    font-size: 1.2rem;
+}
+
+#cast-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.form-bounds {
+    width: 70%;
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    #cast-form {
+        flex-direction: row;
+    }
+}

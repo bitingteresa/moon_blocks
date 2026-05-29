@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- replace fav icon later -->
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Coiny&family=Noto+Sans+HK:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☾ ✨ moon blocks ✨ ☾</title>
+    <script src="./main.js" type="module" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <h1 class="title-text">跋桮 | MOON BLOCKS</h1>
+
+            <div class="hero-img-frame">
+                <div class="hero-img-float">
+                    <img src="./images/binary_god.png"
+                        alt="cartoon of smiling computer wearing sun wukong's crown on a cloud" class="hero-img" />
+                </div>
+            </div>
+
+            <div class="col-centered">
+                <div class="hero-text-box">
+                    <p>
+                        Moon blocks are used in Taiwanese temples to communicate with the gods. They are crescent-shaped
+                        pieces of bamboo or wooden with one round side and one flat side. Think of a croissant that the
+                        universe has tapped to offer you advice.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="jade-background" aria-labelledby="how-it-works-heading">
+            <h2 id="how-it-works-heading" class="sr-only">How it works</h2>
+
+            <div class="steps-col-centered">
+                <div class="steps-bounds">
+                    <ol class="steps-list">
+                        <li class="step-item">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h3 class="step-heading">ASK</h3>
+                                <p>Ask a question you would like advice on. Specific questions yield better results, but
+                                    you
+                                    can
+                                    just use the moon blocks portion for yes/no questions.</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h3 class="step-heading">CAST</h3>
+                                <p>
+                                    Cast the blocks 3 times. Each throw has 3 possible outcomes: yes (one flat,
+                                    one round), no (two round), or laughing/unsure (two flat).
+                                </p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h3 class="step-heading">INTERPRET</h3>
+                                <ul class="steps-sublist">
+                                    <li class="step-subitem">
+                                        <span class="sublist-emoji">🌸</span>
+                                        <p>Two or more yes, unlock the binary gods' guidance</p>
+                                    </li>
+                                    <li class="step-subitem">
+                                        <span class="sublist-emoji">🥀</span>
+                                        <p>Two or more no, save your question for another day</p>
+                                    </li>
+                                    <li class="step-subitem">
+                                        <span class="sublist-emoji">🌱</span>
+                                        <p>For anything else, try rephrasing your question</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="steps-gallery">
+                    <img src="./images/moon_blocks_photo_1.png"
+                        alt="two moon blocks, one round side up and one flat side up" class="steps-img" />
+                    <img src="./images/moon_blocks_photo_2.png"
+                        alt="two moon blocks in three-quarter view showing round outer edges and flat inner sides"
+                        class="steps-img" />
+                    <img src="./images/moon_blocks_photo_3.png" alt="two moon blocks, both flat sides up"
+                        class="steps-img" />
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="lilac-background" aria-labelledby="app-workspace">
+            <h2 id="app-workspace" class="sr-only">App workspace</h2>
+
+            <div class="col-centered window-background">
+                <div class="form-bounds">
+                    <form id="cast-form">
+                        <div>
+                            <label for="query-input" class="sr-only">
+                                Enter your question for the binary gods
+                            </label>
+                            <input id="query-input" name="query-input" type="text" placeholder="Ask a question"
+                                required />
+                        </div>
+                        <div>
+                            <button id="start-session-btn" type="submit">
+                                CAST
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="views">
+                    <div id="sticks-view" class="view" aria-hidden="true">
+                        <div class="sticks-intro-subview subview active">
+                            <div class="sticks-img-frame">
+                                <img src="./images/fortune_sticks_in_canister.png" alt="fortune sticks in canister"
+                                    class="sticks-img">
+                            </div>
+                            <div class="sticks-col-centered">
+                                <p class="sticks-text">The binary gods would love to give you advice via
+                                    fortune stick. Shake the canister to have one fall out. Each stick corresponds to a
+                                    specific poem with two interpretations, a traditional reading and a modern western
+                                    take called reflection. The passages are drawn from
+                                    the out-of-print book <a href="https://archive.org/details/isbn_9781435109780"
+                                        target="_blank">Chinese
+                                        Fortune Sticks</a> by Zhao Xiaomin & Martin Palmer. </p>
+                                <button id="shake-btn" type="button">
+                                    SHAKE IT
+                                </button>
+
+                            </div>
+                        </div>
+                        <div id="sticks-picked-subview" class="subview"></div>
+                    </div>
+
+                    <div id="moon-view" class="view active" aria-hidden="false">
+                        <div id="moon-img-frame"></div>
+                        <div id="moon-description"></div>
+                        <div id="moon-cast-grid"></div>
+                        <div id="moon-outcome-bounds"></div>
+                    </div>
+                </div>
+
+                <div class="btns-layout">
+                    <button id="cast-btn" type="button">
+                        CAST
+                    </button>
+                    <button id="reset-btn" type="button">
+                        NEW QUESTION
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
